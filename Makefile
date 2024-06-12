@@ -7,17 +7,8 @@ TARGET ?= $(PWD)/output
 CONFIG = $(error variable BOARD is not defined)
 TIMER := $(shell date +%s)
 
-ifeq ($(or $(MAKECMDGOALS), $(BOARD)),)
-LIST := $(shell find ./br-ext-*/configs/*_defconfig | sort | \
-	sed -E "s/br-ext-chip-(.+).configs.(.+)_defconfig/'\2' '\1 \2'/")
-BOARD := $(or $(shell whiptail --title "Available boards" --menu "Select a config:" 20 70 12 \
-	--notags $(LIST) 3>&1 1>&2 2>&3),$(CONFIG))
-endif
-
-ifneq ($(BOARD),)
-CONFIG := $(shell find br-ext-*/configs/*_defconfig | grep -m1 $(BOARD))
+CONFIG := br-ext-chip-sigmastar/configs/ssc325_lite_defconfig
 include $(CONFIG)
-endif
 
 all: build repack timer
 
