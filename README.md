@@ -1,3 +1,9 @@
+# MJXSJ05CM ip camera image(ssc323)
+
+this is a repo that focus on building nor flash image for MJXSJ05CM ip camera image which based on ssc323.
+
+- - -
+
 ![OpenIPC Logo](https://cdn.themactep.com/images/logo_openipc.png)
 
 
