@@ -7,7 +7,7 @@ TARGET ?= $(PWD)/output
 CONFIG = $(error variable BOARD is not defined)
 TIMER := $(shell date +%s)
 
-CONFIG := br-ext-chip-sigmastar/configs/ssc325_lite_defconfig
+CONFIG := br-ext-chip-sigmastar/configs/ssc323_lite_defconfig
 include $(CONFIG)
 
 all: build repack timer
