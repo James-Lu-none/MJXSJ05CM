@@ -28,6 +28,6 @@ dd if=/dev/zero bs=1K count=5000 status=none | tr '\000' '\377' > $release
 dd if=output/$1.bin of=$release bs=1K seek=0 conv=notrunc status=none
 dd if=output/uImage.$2 of=$release bs=1K seek=320 conv=notrunc status=none
 dd if=output/rootfs.squashfs.$2 of=$release bs=1K seek=2368 conv=notrunc status=none
-rm -rf output
+# rm -rf output
 
 echo "Created: $release"
