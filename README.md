@@ -1,6 +1,21 @@
 # MJXSJ05CM ip camera image(ssc323)
 
-this is a repo that focus on building nor flash image for MJXSJ05CM ip camera image which based on ssc323.
+this is a repo that focus on building nor flash image for MJXSJ05CM (ssc323) based on OPENIPC.
+
+After flashing the release firmware binary image directly to the nor flash,
+you should connect your pc to the UART serial port on the board. 
+After logging with username: root, password:12345, setup three u-boot env variables with command:
+
+```
+fw_setenv wlandev mt7601u-ssc323-xiaomi
+fw_setenv wlanssid [your_wifi_ssid]
+fw_setenv wlanpass [your_wifi_password]
+```
+
+check the env variables with fw_printenv and reboot, after reboot, wlan0 should be up and connected to your AP
+and start a web ui on the LAN.
+
+![alt text](image.png)
 
 - - -
 
