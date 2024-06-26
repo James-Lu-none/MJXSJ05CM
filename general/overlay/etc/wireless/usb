@@ -76,6 +76,13 @@ if [ "$1" = "mt7601u-hi3516ev200-camhi" ]; then
 	exit 0
 fi
 
+# SSC323 Xiaomi MJXSJ05CM
+if [ "$1" = "mt7601u-ssc323-xiaomi" ]; then
+	set_gpio 14 1
+	modprobe mt7601sta
+	exit 0
+fi
+
 # HI3516EV300 CamHi
 if [ "$1" = "mt7601u-hi3516ev300-camhi" ]; then
 	devmem 0x100C0080 32 0x530
