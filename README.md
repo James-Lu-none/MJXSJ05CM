@@ -13,9 +13,9 @@ fw_setenv wlanpass [your_wifi_password]
 ```
 
 check the env variables with fw_printenv and reboot, after reboot, wlan0 should be up and connected to your AP
-and start a web ui on the LAN.
+and start a web ui on http://your_cam_ip:85.
 
-![alt text](image.png)
+![web ui](image.png)
 
 - - -
 
